@@ -4,7 +4,7 @@ title:      "Jekyll Markdown Cheatsheet"
 subtitle:   "Blog Markdown Reference"
 date:       2021-04-04 13:00:00
 author:     "Sofia"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-default-bg.jpeg"
 catalog: true
 tags:
     - Jekyll
@@ -328,4 +328,5 @@ Referencing a bug by #bugID in your git commit links it to the slip. For example
 ---
 
 License: [CC-BY](https://creativecommons.org/licenses/by/3.0/)
-credit: [nycdh-jekyll](https://github.com/mnyrop/nycdh-jekyll/blob/master/docs/markdown-cheatsheet.md)
+
+Credit: [nycdh-jekyll](https://github.com/mnyrop/nycdh-jekyll/blob/master/docs/markdown-cheatsheet.md)
