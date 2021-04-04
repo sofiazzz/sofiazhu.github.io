@@ -1,77 +1,331 @@
 ---
 layout:     post
-title:      "Hello 2015"
-subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-01-29 12:00:00
-author:     "Hux"
+title:      "Jekyll Markdown Cheatsheet"
+subtitle:   "Blog Markdown Reference"
+date:       2021-04-04 13:00:00
+author:     "Sofia"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
-    - 生活
-    - Meta
+    - Jekyll
+    - markdown
 ---
 
-> “Yeah It's on. ”
+# Markdown Cheatsheet
+
+## Table of Contents  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+[Lists](#lists)  
+[Links](#links)  
+[Images](#images)  
+[Tables](#tables)  
+[Blockquotes](#blockquotes)  
+[Inline HTML](#html)  
+[Horizontal Rule](#hr)  
+[Line Breaks](#lines)  
+[YouTube Videos](#videos)  
+
+<a name="headers"/>
+
+# Headers
+```markdown
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+```
+... becomes ...
+
+> # Heading 1
+> ## Heading 2
+> ### Heading 3
+> #### Heading 4
+> ##### Heading 5
+> ###### Heading 6
+
+<a name="emphasis"/>
+
+# Emphasis
+
+```markdown
+Emphasis, aka italics, with *asterisks* or _underscores_.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Combined emphasis with **asterisks and _underscores_**.
+Strikethrough uses two tildes. ~~Scratch this.~~
+```
+
+... becomes ...
 
 
-Hux 的 Blog 就这么开通了。
-
-[跳过废话，直接看技术实现 ](#build) 
-
-2015 年，Hux 总算有个地方可以好好写点东西了。
-
-
-作为一个程序员， Blog 这种轮子要是挂在大众博客程序上就太没意思了。一是觉得大部分 Blog 服务都太丑，二是觉得不能随便定制不好玩。之前因为太懒没有折腾，结果就一直连个写 Blog 的地儿都没有。
-
-在玩了一段时间知乎之后，答题的快感又激起了我开博客的冲动。之前的[个人网站](http://huangxuan.me/portfolio)是作品集形式的（现在集成进来了），并不适合用来写博文，一不做二不休，花一天搞一个吧！
+> Emphasis, aka italics, with *asterisks* or _underscores_.
+> Strong emphasis, aka bold, with **asterisks** or __underscores__.
+> Combined emphasis with **asterisks and _underscores_**.
+> Strikethrough uses two tildes. ~~Scratch this.~~
 
 
-<p id = "build"></p>
+<a name="lists"/>
 
-## 正文
+# Lists
 
-接下来说说搭建这个博客的技术细节。  
+(In this example, leading and trailing spaces are shown with with dots: ⋅)
 
-正好之前就有关注过 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
+```markdown
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
 
-其优点非常明显：
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
 
-* **Markdown** 带来的优雅写作体验
-* 非常熟悉的 Git workflow ，**Git Commit 即 Blog Post**
-* 利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机
-	* 如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了 
-* Jekyll 的自定制非常容易，基本就是个模版引擎
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+```
+... becomes ...
 
-本来觉得最大的缺点可能是 GitHub 在国内访问起来太慢，所以第二天一起床就到 GitCafe(Chinese GitHub Copy，现在被 Coding 收购了) 迁移了一个[镜像](http://huxpro.coding.me)出来，结果还是巨慢。
+> 1. First ordered list item
+> 2. Another item
+>   * Unordered sub-list.
+> 1. Actual numbers don't matter, just that it's a number
+>   1. Ordered sub-list
+> 4. And another item.
+>    You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).  
+>    To have a line break without a paragraph, you will need to use two trailing spaces.  
+>    Note that this line is separate, but within the same paragraph.    
+>    (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+> * Unordered list can use asterisks
+> - Or minuses
+> + Or pluses
 
-哥哥可是个前端好嘛！ 果断开 Chrome DevTool 查了下网络请求，原来是 **pending 在了 Google Fonts** 上，页面渲染一直被阻塞到请求超时为止，难怪这么慢。  
-忍痛割爱，只好把 Web Fonts 去了（反正超时看到的也只能是 fallback ），果然一下就正常了，而且 GitHub 和 GitCafe 对比并没有感受到明显的速度差异，虽然 github 的 ping 值明显要高一些，达到了 300ms，于是用 DNSPOD 优化了一下速度。
+<a name="links"/>
 
+# Links
+
+There are two ways to create links.
+
+```markdown
+[I'm an inline-style link](https://www.google.com)
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself].
+
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+```
+... becomes ...
+
+> [I'm an inline-style link](https://www.google.com)  
+> [I'm an inline-style link with title](https://www.google.com "Google's Homepage")  
+> [I'm a relative reference to a repository file](../blob/master/LICENSE)  
+> [You can use numbers for reference-style link definitions][1]
+
+> Or leave it empty and use the [link text itself].
+
+> [1]: http://slashdot.org
+> [link text itself]: http://www.reddit.com
+
+<a name="images"/>
+
+# Images
+
+```markdown
+Inline-style:
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Reference-style:
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+```
+... becomes ...
+
+> Here's our logo (hover to see the title text):  
+> Inline-style:  
+> ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")  
+> Reference-style:  
+> ![alt text][logo]  
+>
+> [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"  
+
+<a name="tables"/>
+
+# Tables
+
+Tables aren't part of the core Markdown spec, but they are part of GFM and *Markdown Here* supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
+
+```markdown
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+```
+... becomes ...
+
+> Colons can be used to align columns.
+>
+> | Tables        | Are           | Cool |
+> | ------------- |:-------------:| -----:|
+> | col 3 is      | right-aligned | $1600 |
+> | col 2 is      | centered      |   $12 |
+> | zebra stripes | are neat      |    $1 |  
+>  
+> There must be at least 3 dashes separating each header cell. The outer pipes ( \| ) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+>
+> Markdown | Less | Pretty
+> --- | --- | ---
+> *Still* | `renders` | **nicely**
+> 1 | 2 | 3
+
+<a name="blockquotes"/>
+
+# Blockquotes
+
+```m
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+```
+
+becomes:
+
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+
+<a name="html"/>
+
+# Inline HTML
+
+You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
+
+```no-highlight
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+```
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+<a name="hr"/>
+
+# Horizontal Rule
+
+```
+Three or more...
 
 ---
 
-配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手
+Hyphens
 
-大的 Jekyll 主题上直接 fork 了 Clean Blog（这个主题也相当有名，就不多赘述了。唯一的缺点大概就是没有标签支持，于是我给它补上了。）
+***
 
-本地调试环境需要 `gem install jekyll`，结果 rubygem 的源居然被墙了……后来手动改成了我大淘宝的镜像源才成功
+Asterisks
 
-Theme 的 CSS 是基于 Bootstrap 定制的，看得不爽的地方直接在 Less 里改就好了（平时更习惯 SCSS 些），**不过其实我一直觉得 Bootstrap 在移动端的体验做得相当一般，比我在淘宝参与的团队 CSS 框架差多了……**所以为了体验，也补了不少 CSS 进去
+___
 
-最后就进入了耗时反而最长的**做图、写字**阶段，也算是进入了**写博客**的正轨，因为是类似 Hack Day 的方式去搭这个站的，所以折腾折腾着大半夜就过去了。
+Underscores
+```
 
-第二天考虑中文字体的渲染，fork 了 [Type is Beautiful](http://www.typeisbeautiful.com/) 的 `font` CSS，调整了字号，适配了 Win 的渣渲染，中英文混排效果好多了。
+Three or more...
 
+---
 
-## 后记
+Hyphens
 
-回顾这个博客的诞生，纯粹是出于个人兴趣。在知乎相关问题上回答并获得一定的 star 后，我决定把这个博客主题当作一个小小的开源项目来维护。
+***
 
-在经历 v1.0 - v1.5 的蜕变后，这个博客主题愈发完整，不但增加了诸多 UI 层的优化（opinionated）；在代码层面，更加丰富的配置项也使得这个主题拥有了更好的灵活性与可拓展性。而作为一个开源项目，我也积极的为其完善文档与解决 issue。
+Asterisks
 
-如果你恰好逛到了这里，希望你也能喜欢这个博客主题。
+___
 
-—— Hux 后记于 2015.10
+Underscores
 
+<a name="lines"/>
 
+# Line Breaks
+
+My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.
+
+Here are some things to try out:
+
+```
+Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+```
+
+Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also begins a separate paragraph, but...  
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+
+(Technical note: *Markdown Here* uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
+
+<a name="videos"/>
+
+# YouTube Videos
+
+They can't be added directly but you can add an image with a link to the video like this:
+
+```no-highlight
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg"
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+```
+
+Or, in pure Markdown, but losing the image sizing and border:
+
+```no-highlight
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+```
+
+Referencing a bug by #bugID in your git commit links it to the slip. For example #1.
+
+---
+
+License: [CC-BY](https://creativecommons.org/licenses/by/3.0/)
+credit: [nycdh-jekyll](https://github.com/mnyrop/nycdh-jekyll/blob/master/docs/markdown-cheatsheet.md)
