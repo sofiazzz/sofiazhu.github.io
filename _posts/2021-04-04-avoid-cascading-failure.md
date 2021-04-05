@@ -18,7 +18,7 @@ In big tech company, we usually have complicated system with thousands of micro 
 
 Cascading failures can cause unavailability of multiple services and even the entire system. 
 
-![alt text](../img/post-img/2021-04-04-cascading-failure/network-failure-example.gif)
+![alt text](/img/post-img/2021-04-04-cascading-failure/network-failure-example.gif)
 
 ## Design Pattern
 
@@ -54,11 +54,11 @@ Sometimes we are launching new features at client that introduces unexpected tra
 
 [Chaos Engineering](https://en.wikipedia.org/wiki/Chaos_engineering) is a discipline of experimenting on a system to build confidence in the system's capability to withstand turbulent conditions in production. We intentionally try to break the system under certain stresses to determine potential outage, bottleneck and improve resiliency. It was first developed at Netflix in 2008. 
 
-[![IMAGE ALT TEXT HERE](/Users/qizhu/Documents/Sofia/sofia-post/sofiazzz.github.io/img/post-img/2021-04-04-cascading-failure/chaos-engineering-netflix.png)](https://www.youtube.com/watch?v=3WRVgC8SiGc&t=9s)
+[![IMAGE ALT TEXT HERE](/img/post-img/2021-04-04-cascading-failure/chaos-engineering-netflix.png)](https://www.youtube.com/watch?v=3WRVgC8SiGc&t=9s)
 
 Unlike fuzz testing, chaos engineering is a testing more from the system perspective instead of components. A blog demonstrate this clearly with the following diagram:
 
-![alt text](/Users/qizhu/Documents/Sofia/sofia-post/sofiazzz.github.io/img/post-img/2021-04-04-cascading-failure/testing-diagram.png)
+![alt text](/img/post-img/2021-04-04-cascading-failure/testing-diagram.png)
 
 ## Reference
 
