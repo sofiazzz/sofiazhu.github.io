@@ -12,11 +12,11 @@ tags:
     - Tech
 ---
 
-## Context and Background
+## Context and Problem
 
 In big tech company, we usually have complicated system with thousands of micro services. Micro services decouple the monolithic system into different small components and improve engineers productiviy. However, it also increase the complexity of the system and make it hard to debug and maintain. One of the errors that we do not want to encounter is the [cascading failures](https://en.wikipedia.org/wiki/Cascading_failure).
 
-Cascading failures can cause unavailability of multiple services and even the entire system. 
+Cascading failures can cause unavailability of multiple services and even the entire system. This is a non-trivial problem that I have seen recently at work. Therefore, I want to note down what I have learned from design and testing perspective to prevent such failure.
 
 ![alt text](/img/post-img/2021-04-04-cascading-failure/network-failure-example.gif)
 
@@ -50,7 +50,7 @@ It will take a long time when you want to start new instances to serve rapidly i
 
 Sometimes we are launching new features at client that introduces unexpected traffics. To quickly revert back to original state without rolling back, we can turn off the features. The knob can be in config or some experimental tool. One example is [Trex](https://engineering.linkedin.com/blog/2020/making-the-linkedin-experimentation-engine-20x-faster) heavily used at Linkedin which can turn off the feature without redeployment and making any change to code; It's often used to ramp new features.
 
-## Prevention - Chaos Engineering
+## Testing - Chaos Engineering
 
 [Chaos Engineering](https://en.wikipedia.org/wiki/Chaos_engineering) is a discipline of experimenting on a system to build confidence in the system's capability to withstand turbulent conditions in production. We intentionally try to break the system under certain stresses to determine potential outage, bottleneck and improve resiliency. It was first developed at Netflix in 2008. 
 
