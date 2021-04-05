@@ -8,12 +8,10 @@ header-img: "img/post-default-bg.jpeg"
 catalog: true
 tags:
     - Jekyll
-    - markdown
+    - Markdown
 ---
 
-# Markdown Cheatsheet
-
-## Table of Contents  
+# Table of Contents  
 [Headers](#headers)  
 [Emphasis](#emphasis)  
 [Lists](#lists)  
