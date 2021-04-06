@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Netflix Cuture -- 01"
+title:      "Netflix Cuture 01"
 subtitle:   "读《奈飞文化手册》01"
 date:       2021-04-06 13:00:00
 author:     "Sofia"
