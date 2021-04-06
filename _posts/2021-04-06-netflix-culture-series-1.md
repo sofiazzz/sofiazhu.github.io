@@ -1,17 +1,16 @@
 ---
 layout:     post
 title:      "Netflix Culture P01"
-subtitle:   "《奈飞文化手册》 P01"
-date:       2021-04-06 13:20:08
+subtitle:   "读《奈飞文化手册》 -- P01"
+date:       2021-04-06 12:59:00
 author:     "Sofia"
 header-img: "img/post-default-bg.jpeg"
 catalog: true
 tags:
     - Book
     - Company culture
- 	- Management
+    - Management
 ---
-
 
 ### 前言
 
@@ -36,3 +35,4 @@ tags:
 这本书还有很多内容，我读下来感觉不仅能理解管理者的用心，同时也从中获得一些个人成长的启示。还是很推荐去看看的。
 
 ![alt text](/img/post-img/netflix-culture.jpeg)
+
