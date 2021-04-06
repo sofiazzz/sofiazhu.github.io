@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "Netflix Cuture 01"
-subtitle:   "Build a culture of freedom and responsibility"
-date:       2021-04-06 13:00:00
+title:      "Netflix Culture P01"
+subtitle:   "《奈飞文化手册》 P01"
+date:       2021-04-06 13:20:08
 author:     "Sofia"
 header-img: "img/post-default-bg.jpeg"
 catalog: true
@@ -11,6 +11,7 @@ tags:
     - Company culture
  	- Management
 ---
+
 
 ### 前言
 
