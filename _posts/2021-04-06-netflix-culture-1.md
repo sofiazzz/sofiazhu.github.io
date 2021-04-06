@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Netflix Cuture 01"
-subtitle:   "读《奈飞文化手册》01"
+subtitle:   "Build a culture of freedom and responsibility"
 date:       2021-04-06 13:00:00
 author:     "Sofia"
 header-img: "img/post-default-bg.jpeg"
