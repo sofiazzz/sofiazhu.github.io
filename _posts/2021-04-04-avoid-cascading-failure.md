@@ -2,7 +2,7 @@
 layout:     post
 title:      "Avoid Cascading Failures in Distributed System"
 subtitle:   "Distributed System Pattern, Chaos Engineering"
-date:       2021-04-04 13:00:00
+date:       2021-04-04 16:00:00
 author:     "Sofia"
 header-img: "img/post-default-bg.jpeg"
 catalog: true

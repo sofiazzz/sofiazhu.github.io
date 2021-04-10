@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Jekyll Markdown Cheatsheet"
-subtitle:   "Blog Markdown Reference"
+title:      "Markdown Cheatsheet"
+subtitle:   "Jekyll Markdown Reference"
 date:       2021-04-04 13:00:00
 author:     "Sofia"
 header-img: "img/post-default-bg.jpeg"
@@ -154,7 +154,7 @@ Reference-style:
 > Reference-style:  
 > ![alt text][logo]  
 >
-> [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"  
+> [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 <a name="tables"/>
 
@@ -188,7 +188,7 @@ Markdown | Less | Pretty
 > | ------------- |:-------------:| -----:|
 > | col 3 is      | right-aligned | $1600 |
 > | col 2 is      | centered      |   $12 |
-> | zebra stripes | are neat      |    $1 |  
+> | zebra stripes | are neat      |    $1 |
 >  
 > There must be at least 3 dashes separating each header cell. The outer pipes ( \| ) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 >
